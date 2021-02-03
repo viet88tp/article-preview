@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+.transparent-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  /* border-style: solid; */
+  background-color: white;
+  border-radius: 15px;
+  width: 765px;
+  height: 320px;
+  display: flex;
+  /* overflow: hidden; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-image {
+  background-image: url("images/drawers.jpg");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  width: 325px;
+  /* height: 350px; */
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  /* border-style: solid; */
+}
+
+.right-text {
+  padding: 50px 40px 50px 40px;
+  width: 430px;
+  /* border-style: solid; */
+}
+
+.text {
+  font-family: Manrope, Helvetica, sans-serif;
+  color: hsl(217, 19%, 35%);
+}
+
+.review-content {
+  margin: 20px 0 20px 0;
+  font-size: 13px;
+}
+
+.profile {
+  display: flex;
+}
+
+.pic {
+  margin-top: 10px;
+  background-image: url("images/avatar-michelle.jpg");
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border-radius: 50px;
+}
+
+.name {
+  position: relative;
+  top: 10px;
+  left: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.date {
+  position: relative;
+  top: 35px;
+  left: -100px;
+  font-size: 13px;
+  color: hsl(212, 23%, 69%);
+}
+
+.share-button {
+  background-image: url("images/icon-share.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(210, 46%, 95%);
+  width: 30px;
+  height: 30px;
+  background-position: left 8px bottom 10px;
+  /* border-style: solid; */
+  border-radius: 50px;
+  position: relative;
+  left: 90px;
+  top: 20px;
+}
+
+.share-button:hover {
+  cursor: pointer;
+}
+
+.share-wrapper {
+  position: absolute;
+  background-color: hsl(217, 19%, 35%);
+  box-shadow: 5px 5px 5px hsla(214, 17%, 51%, 0.377);
+  /* border-style: solid; */
+  border-radius: 6px;
+  width: 180px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  left: 617px;
+  top: 180px;
+}
+
+.triangle-down {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 15px solid hsl(217, 19%, 35%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.share-icons {
+  position: relative;
+  /* border-style: solid; */
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+
+.share-text {
+  color: white;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.facebook {
+  background-image: url("images/icon-facebook.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px;
+  margin-left: 10px;
+}
+
+.twitter {
+  background-image: url("images/icon-twitter.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px;
+  margin-left: 10px;
+}
+
+.pinterest {
+  background-image: url("images/icon-pinterest.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px;
+  margin-left: 10px;
+}
+
+.twitter,
+.facebook,
+.pinterest:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+    height: 650px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .left-image {
+    position: relative;
+    width: 100%;
+    height: 325px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+
+  .right-text {
+    padding: 50px 50px 0 50px;
+    width: 400px;
+  }
+
+  .share-wrapper {
+    position: absolute;
+    width: 400px;
+    height: 80px;
+    top: 570px;
+    left: 0;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .triangle-down {
+    display: none;
+  }
+
+  .share-icons {
+    position: relative;
+    height: 20px;
+    left: 130px;
+  }
+
+  .share-text {
+    font-size: 15px;
+  }
+
+  .facebook,
+  .twitter,
+  .pinterest {
+    margin-left: 20px;
+    width: 20px;
+    background-size: 20px;
+  }
+
+  .share-button {
+    position: relative;
+    top: 30px;
+    left: 40px;
+    z-index: 2;
+  }
+}
